@@ -18,23 +18,23 @@ This is a guide for anyone who needs to understand the steps for creating the ti
 * subject_train = UCI HAR Dataset/train/subject_train.txt
 * activity_labels = UCI HAR Dataset/activity_labels.txt
 
-2. Merging Test and Train data frames using rbind function:
+1. Merging Test and Train data frames using rbind function:
 
 * X_full = X_test and X_train merged
 * Y_full = Y_test and Y_train merged
 * subject_full = subject_test and subject_train merged
 
-3. Putting all data frames together :
+1. Putting all data frames together :
 
 * full = data frame containing X,Y and subject merged
 * complete = same as full plus the activity labels
 
-4. Extracting only mean() and std() measurements:
+1. Extracting only mean() and std() measurements:
 
 * creates a logical vector containing the columns which names matches "mean" and "std" plus activityId, subject and activity label (label)
 * then subset the complete data frame using the logical vector, resulting the mean_std_measurements data frame
 
-5. Generating the tidy data set:
+1. Generating the tidy data set:
 
 * tidy_data = group the data frame by subject and activity label (label)
 * tidy_answer = Average of each variable (see the list below) for each activity label and subject:
