@@ -1,6 +1,7 @@
 Repository used to store the tidy data regarding the Human Activity Recognition Using Smartphones Data Set 
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 ===========
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 The goal of this project is to prepare tidy data that can be used for later analysis. 
 
