@@ -7,7 +7,7 @@ This is a guide for anyone who needs to understand the steps for creating the ti
 * The description of each data file can be found both on the file "UCI HAR Dataset\README.txt" and the project site http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 * The steps described below use the data files inside the "UCI HAR Dataset" folder to create a new tidy dataset, named "course_project_q1.txt".
 
-1. Loading each project file/data set to its corresponding data frame in R:
+### 1) Loading each project file/data set to its corresponding data frame in R:
 
 * features = UCI HAR Dataset/features.txt
 * X_test = UCI HAR Dataset/test/X_test.txt -> using the features dataset above as col.names
@@ -18,23 +18,23 @@ This is a guide for anyone who needs to understand the steps for creating the ti
 * subject_train = UCI HAR Dataset/train/subject_train.txt
 * activity_labels = UCI HAR Dataset/activity_labels.txt
 
-1. Merging Test and Train data frames using rbind function:
+### 2) Merging Test and Train data frames using rbind function:
 
 * X_full = X_test and X_train merged
 * Y_full = Y_test and Y_train merged
 * subject_full = subject_test and subject_train merged
 
-1. Putting all data frames together :
+### 3) Putting all data frames together :
 
 * full = data frame containing X,Y and subject merged
 * complete = same as full plus the activity labels
 
-1. Extracting only mean() and std() measurements:
+### 4) Extracting only mean() and std() measurements:
 
 * creates a logical vector containing the columns which names matches "mean" and "std" plus activityId, subject and activity label (label)
 * then subset the complete data frame using the logical vector, resulting the mean_std_measurements data frame
 
-1. Generating the tidy data set:
+### 5) Generating the tidy data set:
 
 * tidy_data = group the data frame by subject and activity label (label)
 * tidy_answer = Average of each variable (see the list below) for each activity label and subject:
